@@ -266,12 +266,12 @@ def main():
             sys.exit(-1)
         n.set_temperature(new_temp)
     elif (cmd == "fan"):
-        if len(args)<2 or args[1] not in {"on", "auto"}:
+        if len(args)<2 or args[1] not in ["on", "auto"]:
             print "please specify a fan state of 'on' or 'auto'"
             sys.exit(-1)
         n.set_fan(args[1])
     elif (cmd == "mode"):
-        if len(args)<2 or args[1] not in {"cool", "heat", "range"}:
+        if len(args)<2 or args[1] not in ["cool", "heat", "range"]:
             print "please specify a thermostat mode of 'cool', 'heat'  or 'range'"
             sys.exit(-1)
         n.set_mode(args[1])
@@ -282,7 +282,7 @@ def main():
     elif (cmd == "curhumid"):
         print n.status["device"][n.serial]["current_humidity"]
     elif (cmd == "away"):
-        if len(args)<2 or args[1] not in {"away", "here"}:
+        if len(args)<2 or args[1] not in ["away", "here"]:
             print "please specify a state of 'away' or 'here'"
             sys.exit(-1)
         n.set_away(args[1])
